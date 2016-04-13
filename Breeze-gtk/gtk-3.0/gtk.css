@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  -GtkToolButton-icon-spacing: 4;
+  -toolbutton-icon-spacing: 4;
   -GtkTextView-error-underline-color: #ed1515;
   -GtkCheckButton-indicator-size: 16;
   -GtkCheckMenuItem-indicator-size: 16;
@@ -43,7 +43,7 @@
 .gtkstyle-fallback {
   background-color: #eff0f1;
   color: #31363b; }
-  .gtkstyle-fallback:prelight {
+  .gtkstyle-fallback:hover {
     background-color: white;
     color: #31363b; }
   .gtkstyle-fallback:active {
@@ -66,38 +66,38 @@
   border: 1px solid #3daee9;
   background-color: rgba(61, 174, 233, 0.2); }
 
-.label.separator, GtkPlacesSidebar.sidebar .view .label.separator {
+.label.separator, placesidebar.sidebar .view .label.separator {
   color: #31363b; }
 .label:disabled {
   color: #909396; }
 .label link {
-  color: ##1998da; }
+  color: #1998da; }
 .label link:visited  {
   color: #1478ac; }
 
-.dim-label, .label.separator, GtkPlacesSidebar.sidebar .view .label.separator, .titlebar .subtitle,
+.dim-label, .label.separator, placesidebar.sidebar .view .label.separator, .titlebar .subtitle,
 .header-bar .subtitle {
   opacity: 0.55;
   text-shadow: none; }
 
-GtkAssistant .sidebar {
+assistant .sidebar {
   background-color: #fcfcfc;
   border-top: 1px solid #bdc3c7; }
-  GtkAssistant .sidebar:dir(ltr) {
+  assistant .sidebar:dir(ltr) {
     border-right: 1px solid #bdc3c7; }
-  GtkAssistant .sidebar:dir(rtl) {
+  assistant .sidebar:dir(rtl) {
     border-left: 1px solid #bdc3c7; }
-  GtkAssistant .sidebar:backdrop {
+  assistant .sidebar:backdrop {
     background-color: white;
     border-color: #c2c7cb; }
-GtkAssistant.csd .sidebar {
+assistant.csd .sidebar {
   border-top-style: none; }
-GtkAssistant .sidebar .label {
+assistant .sidebar .label {
   padding: 6px 12px; }
-GtkAssistant .sidebar .label.highlight {
+assistant .sidebar .label.highlight {
   background-color: #c9cacc; }
 
-GtkTextView {
+textview.view {
   background-color: #f5f6f6; }
 
 .grid-child {
@@ -290,8 +290,7 @@ GtkTextView {
   border-top-color: #3daee9; }
 .linked.vertical > .entry:focus:not(:only-child) + .entry,
 .linked.vertical > .entry:focus:not(:only-child) + .button,
-.linked.vertical > .entry:focus:not(:only-child) + GtkComboBox > .button,
-.linked.vertical > .entry:focus:not(:only-child) + GtkComboBoxText > .button {
+.linked.vertical > .entry:focus:not(:only-child) + combobox > .button {
   border-top-color: #3daee9; }
 
 /***********
@@ -787,8 +786,8 @@ GtkTextView {
     .stack-switcher > .button > .label {
       padding-left: 6px;
       padding-right: 6px; }
-    .stack-switcher > .button > GtkImage, .header-bar .stack-switcher > .button.titlebutton > GtkImage,
-    .titlebar .stack-switcher > .button.titlebutton > GtkImage {
+    .stack-switcher > .button > image, .header-bar .stack-switcher > .button.titlebutton > image,
+    .titlebar .stack-switcher > .button.titlebutton > image {
       padding-left: 6px;
       padding-right: 6px;
       padding-top: 3px;
@@ -798,7 +797,7 @@ GtkTextView {
     .stack-switcher > .button.image-button, .header-bar .stack-switcher > .titlebutton.button,
     .titlebar .stack-switcher > .titlebutton.button {
       padding: 5px 2px; }
-    .stack-switcher > .button.needs-attention:active > .label, .stack-switcher > .button.needs-attention:active > GtkImage, .stack-switcher > .button.needs-attention:checked > .label, .stack-switcher > .button.needs-attention:checked > GtkImage {
+    .stack-switcher > .button.needs-attention:active > .label, .stack-switcher > .button.needs-attention:active > image, .stack-switcher > .button.needs-attention:checked > .label, .stack-switcher > .button.needs-attention:checked > image {
       animation: none;
       background-image: none; }
   .inline-toolbar .button, .inline-toolbar .header-bar .button.titlebutton, .header-bar .inline-toolbar .button.titlebutton,
@@ -811,160 +810,160 @@ GtkTextView {
   .titlebar .primary-toolbar .button.titlebutton {
     -gtk-icon-shadow: none; }
 
-.stack-switcher > .button.needs-attention > .label, .stack-switcher > .button.needs-attention > GtkImage, .sidebar-item.needs-attention > .label {
+.stack-switcher > .button.needs-attention > .label, .stack-switcher > .button.needs-attention > image, .sidebar-item.needs-attention > .label {
   animation: needs_attention 150ms ease-in;
   background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#3daee9), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(rgba(255, 255, 255, 0.76923)), to(transparent));
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
   background-position: right 3px, right 4px; }
-  .stack-switcher > .button.needs-attention > .label:backdrop, .stack-switcher > .button.needs-attention > GtkImage:backdrop, .sidebar-item.needs-attention > .label:backdrop {
+  .stack-switcher > .button.needs-attention > .label:backdrop, .stack-switcher > .button.needs-attention > image:backdrop, .sidebar-item.needs-attention > .label:backdrop {
     background-size: 6px 6px, 0 0; }
-  .stack-switcher > .button.needs-attention > .label:dir(rtl), .stack-switcher > .button.needs-attention > GtkImage:dir(rtl), .sidebar-item.needs-attention > .label:dir(rtl) {
+  .stack-switcher > .button.needs-attention > .label:dir(rtl), .stack-switcher > .button.needs-attention > image:dir(rtl), .sidebar-item.needs-attention > .label:dir(rtl) {
     background-position: left 3px, left 4px; }
 
-.inline-toolbar GtkToolButton > .button, .inline-toolbar .header-bar GtkToolButton > .button.titlebutton, .header-bar .inline-toolbar GtkToolButton > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton > .button.titlebutton {
+.inline-toolbar toolbutton > .button, .inline-toolbar .header-bar toolbutton > .button.titlebutton, .header-bar .inline-toolbar toolbutton > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton > .button.titlebutton {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   color: #31363b;
   border-color: #bdc3c7;
   background-image: linear-gradient(to bottom, #f4f5f6, #eff0f1); }
-  .inline-toolbar GtkToolButton > .button:hover {
+  .inline-toolbar toolbutton > .button:hover {
     color: #31363b;
     border-color: #3daee9;
     background-image: linear-gradient(to bottom, #eff0f1, #eff0f1); }
-  .inline-toolbar GtkToolButton > .button:active, .inline-toolbar GtkToolButton > .button:checked {
+  .inline-toolbar toolbutton > .button:active, .inline-toolbar toolbutton > .button:checked {
     color: #fcfcfc;
     border-color: #bdc3c7;
     background-image: linear-gradient(to bottom, #3daee9, shade(#3daee9, 0.8)); }
-  .inline-toolbar GtkToolButton > .button:disabled {
+  .inline-toolbar toolbutton > .button:disabled {
     color: #909396;
     border-color: #bdc3c7;
     background-image: linear-gradient(to bottom, #e5e6e7);
     text-shadow: none;
     -gtk-icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
-    .inline-toolbar GtkToolButton > .button:disabled > .label {
+    .inline-toolbar toolbutton > .button:disabled > .label {
       color: inherit; }
-  .inline-toolbar GtkToolButton > .button:disabled:active, .inline-toolbar GtkToolButton > .button:disabled:checked {
+  .inline-toolbar toolbutton > .button:disabled:active, .inline-toolbar toolbutton > .button:disabled:checked {
     color: #909396;
     border-color: #bdc3c7;
     background-image: linear-gradient(to bottom, #e1e2e3, #e5e6e7); }
-    .inline-toolbar GtkToolButton > .button:disabled:active > .label, .inline-toolbar GtkToolButton > .button:disabled:checked > .label {
+    .inline-toolbar toolbutton > .button:disabled:active > .label, .inline-toolbar toolbutton > .button:disabled:checked > .label {
       color: inherit; }
-  .inline-toolbar GtkToolButton > .button:backdrop {
+  .inline-toolbar toolbutton > .button:backdrop {
     color: #31363b;
     border-color: #bdc3c7;
     background-image: linear-gradient(to bottom, #eff0f1);
     text-shadow: none;
     -gtk-icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
-  .inline-toolbar GtkToolButton > .button:backdrop:active, .inline-toolbar GtkToolButton > .button:backdrop:checked {
+  .inline-toolbar toolbutton > .button:backdrop:active, .inline-toolbar toolbutton > .button:backdrop:checked {
     color: #bfc1c3;
     border-color: #c2c7cb;
     background-image: linear-gradient(to bottom, #dfe1e3);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
-  .inline-toolbar GtkToolButton > .button:backdrop:disabled {
+  .inline-toolbar toolbutton > .button:backdrop:disabled {
     color: #c6cacd;
     border-color: #c2c7cb;
     background-image: linear-gradient(to bottom, #e5e6e7);
     text-shadow: none;
     -gtk-icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
-    .inline-toolbar GtkToolButton > .button:backdrop:disabled > .label {
+    .inline-toolbar toolbutton > .button:backdrop:disabled > .label {
       color: inherit; }
-  .inline-toolbar GtkToolButton > .button:backdrop:disabled:active, .inline-toolbar GtkToolButton > .button:backdrop:disabled:checked {
+  .inline-toolbar toolbutton > .button:backdrop:disabled:active, .inline-toolbar toolbutton > .button:backdrop:disabled:checked {
     color: #c6cacd;
     border-color: #c2c7cb;
     background-image: linear-gradient(to bottom, #d8d9db); }
-    .inline-toolbar GtkToolButton > .button:backdrop:disabled:active > .label, .inline-toolbar GtkToolButton > .button:backdrop:disabled:checked > .label {
+    .inline-toolbar toolbutton > .button:backdrop:disabled:active > .label, .inline-toolbar toolbutton > .button:backdrop:disabled:checked > .label {
       color: inherit; }
 
-.inline-toolbar GtkToolButton > .button.flat:dir(rtl), .inline-toolbar .header-bar GtkToolButton > .button.titlebutton:dir(rtl), .header-bar .inline-toolbar GtkToolButton > .button.titlebutton:dir(rtl),
-.inline-toolbar .titlebar GtkToolButton > .button.titlebutton:dir(rtl),
-.titlebar .inline-toolbar GtkToolButton > .button.titlebutton:dir(rtl),
-.inline-toolbar GtkToolButton:backdrop > .button.flat:dir(rtl), .inline-toolbar.toolbar GtkToolButton:dir(rtl) > .button.flat, .inline-toolbar GtkToolButton:dir(rtl) > .button.flat, .inline-toolbar.search-bar GtkToolButton:dir(rtl) > .button.flat, .inline-toolbar.location-bar GtkToolButton:dir(rtl) > .button.flat, .inline-toolbar .header-bar GtkToolButton:dir(rtl) > .button.titlebutton, .header-bar .inline-toolbar GtkToolButton:dir(rtl) > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton:dir(rtl) > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton:dir(rtl) > .button.titlebutton,
-.inline-toolbar.toolbar GtkToolButton:backdrop:dir(rtl) > .button.flat,
-.inline-toolbar GtkToolButton:backdrop:dir(rtl) > .button.flat,
-.inline-toolbar.search-bar GtkToolButton:backdrop:dir(rtl) > .button.flat,
-.inline-toolbar.location-bar GtkToolButton:backdrop:dir(rtl) > .button.flat,
-.inline-toolbar .header-bar GtkToolButton:backdrop:dir(rtl) > .button.titlebutton,
-.header-bar .inline-toolbar GtkToolButton:backdrop:dir(rtl) > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton:backdrop:dir(rtl) > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton:backdrop:dir(rtl) > .button.titlebutton, .osd .button:dir(rtl):hover, .osd .button:dir(rtl):active, .osd .button:dir(rtl):checked, .osd .button:dir(rtl):disabled, .osd .button:dir(rtl):backdrop, .osd .button.suggested-action:dir(rtl), .osd .button.destructive-action:dir(rtl), .inline-toolbar .button:dir(rtl), .linked > .button:dir(rtl), GtkComboBox.combobox-entry .entry:dir(rtl), GtkComboBox.combobox-entry .button:dir(rtl), .linked > GtkComboBox > .button:dir(rtl) {
+.inline-toolbar toolbutton > .button.flat:dir(rtl), .inline-toolbar .header-bar toolbutton > .button.titlebutton:dir(rtl), .header-bar .inline-toolbar toolbutton > .button.titlebutton:dir(rtl),
+.inline-toolbar .titlebar toolbutton > .button.titlebutton:dir(rtl),
+.titlebar .inline-toolbar toolbutton > .button.titlebutton:dir(rtl),
+.inline-toolbar toolbutton:backdrop > .button.flat:dir(rtl), .inline-toolbar.toolbar toolbutton:dir(rtl) > .button.flat, .inline-toolbar toolbutton:dir(rtl) > .button.flat, .inline-toolbar.search-bar toolbutton:dir(rtl) > .button.flat, .inline-toolbar.location-bar toolbutton:dir(rtl) > .button.flat, .inline-toolbar .header-bar toolbutton:dir(rtl) > .button.titlebutton, .header-bar .inline-toolbar toolbutton:dir(rtl) > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton:dir(rtl) > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton:dir(rtl) > .button.titlebutton,
+.inline-toolbar.toolbar toolbutton:backdrop:dir(rtl) > .button.flat,
+.inline-toolbar toolbutton:backdrop:dir(rtl) > .button.flat,
+.inline-toolbar.search-bar toolbutton:backdrop:dir(rtl) > .button.flat,
+.inline-toolbar.location-bar toolbutton:backdrop:dir(rtl) > .button.flat,
+.inline-toolbar .header-bar toolbutton:backdrop:dir(rtl) > .button.titlebutton,
+.header-bar .inline-toolbar toolbutton:backdrop:dir(rtl) > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton:backdrop:dir(rtl) > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton:backdrop:dir(rtl) > .button.titlebutton, .osd .button:dir(rtl):hover, .osd .button:dir(rtl):active, .osd .button:dir(rtl):checked, .osd .button:dir(rtl):disabled, .osd .button:dir(rtl):backdrop, .osd .button.suggested-action:dir(rtl), .osd .button.destructive-action:dir(rtl), .inline-toolbar .button:dir(rtl), .linked > .button:dir(rtl), combobox.combobox-entry .entry:dir(rtl), combobox.combobox-entry .button:dir(rtl), .linked > combobox> .button:dir(rtl) {
   border-radius: 3px; }
 
-.osd .button:first-child:hover, .osd .button:first-child:active, .osd .button:first-child:checked, .osd .button:first-child:disabled, .osd .button:first-child:backdrop, .osd .button.suggested-action:first-child, .osd .button.destructive-action:first-child, .inline-toolbar .button:first-child, .linked > .button:first-child, .inline-toolbar.toolbar GtkToolButton:first-child > .button.flat, .inline-toolbar GtkToolButton:first-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:first-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:first-child > .button.flat, .inline-toolbar .header-bar GtkToolButton:first-child > .button.titlebutton, .header-bar .inline-toolbar GtkToolButton:first-child > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton:first-child > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton:first-child > .button.titlebutton,
-.inline-toolbar.toolbar GtkToolButton:backdrop:first-child > .button.flat,
-.inline-toolbar GtkToolButton:backdrop:first-child > .button.flat,
-.inline-toolbar.search-bar GtkToolButton:backdrop:first-child > .button.flat,
-.inline-toolbar.location-bar GtkToolButton:backdrop:first-child > .button.flat,
-.inline-toolbar .header-bar GtkToolButton:backdrop:first-child > .button.titlebutton,
-.header-bar .inline-toolbar GtkToolButton:backdrop:first-child > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton:backdrop:first-child > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton:backdrop:first-child > .button.titlebutton, GtkComboBox.combobox-entry .entry:first-child, GtkComboBox.combobox-entry .button:first-child, .linked > GtkComboBox:first-child > .button {
+.osd .button:first-child:hover, .osd .button:first-child:active, .osd .button:first-child:checked, .osd .button:first-child:disabled, .osd .button:first-child:backdrop, .osd .button.suggested-action:first-child, .osd .button.destructive-action:first-child, .inline-toolbar .button:first-child, .linked > .button:first-child, .inline-toolbar.toolbar toolbutton:first-child > .button.flat, .inline-toolbar toolbutton:first-child > .button.flat, .inline-toolbar.search-bar toolbutton:first-child > .button.flat, .inline-toolbar.location-bar toolbutton:first-child > .button.flat, .inline-toolbar .header-bar toolbutton:first-child > .button.titlebutton, .header-bar .inline-toolbar toolbutton:first-child > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton:first-child > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton:first-child > .button.titlebutton,
+.inline-toolbar.toolbar toolbutton:backdrop:first-child > .button.flat,
+.inline-toolbar toolbutton:backdrop:first-child > .button.flat,
+.inline-toolbar.search-bar toolbutton:backdrop:first-child > .button.flat,
+.inline-toolbar.location-bar toolbutton:backdrop:first-child > .button.flat,
+.inline-toolbar .header-bar toolbutton:backdrop:first-child > .button.titlebutton,
+.header-bar .inline-toolbar toolbutton:backdrop:first-child > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton:backdrop:first-child > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton:backdrop:first-child > .button.titlebutton, combobox.combobox-entry .entry:first-child, combobox.combobox-entry .button:first-child, .linked > combobox:first-child > .button {
   border-radius: 3px 3px 3px 3px;
   border-left-style: solid; }
-.osd .button:last-child:hover, .osd .button:last-child:active, .osd .button:last-child:checked, .osd .button:last-child:disabled, .osd .button:last-child:backdrop, .osd .button.suggested-action:last-child, .osd .button.destructive-action:last-child, .inline-toolbar .button:last-child, .linked > .button:last-child, .inline-toolbar.toolbar GtkToolButton:last-child > .button.flat, .inline-toolbar GtkToolButton:last-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:last-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:last-child > .button.flat, .inline-toolbar .header-bar GtkToolButton:last-child > .button.titlebutton, .header-bar .inline-toolbar GtkToolButton:last-child > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton:last-child > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton:last-child > .button.titlebutton,
-.inline-toolbar.toolbar GtkToolButton:backdrop:last-child > .button.flat,
-.inline-toolbar GtkToolButton:backdrop:last-child > .button.flat,
-.inline-toolbar.search-bar GtkToolButton:backdrop:last-child > .button.flat,
-.inline-toolbar.location-bar GtkToolButton:backdrop:last-child > .button.flat,
-.inline-toolbar .header-bar GtkToolButton:backdrop:last-child > .button.titlebutton,
-.header-bar .inline-toolbar GtkToolButton:backdrop:last-child > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton:backdrop:last-child > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton:backdrop:last-child > .button.titlebutton, GtkComboBox.combobox-entry .entry:last-child, GtkComboBox.combobox-entry .button:last-child, .linked > GtkComboBox:last-child > .button {
+.osd .button:last-child:hover, .osd .button:last-child:active, .osd .button:last-child:checked, .osd .button:last-child:disabled, .osd .button:last-child:backdrop, .osd .button.suggested-action:last-child, .osd .button.destructive-action:last-child, .inline-toolbar .button:last-child, .linked > .button:last-child, .inline-toolbar.toolbar toolbutton:last-child > .button.flat, .inline-toolbar toolbutton:last-child > .button.flat, .inline-toolbar.search-bar toolbutton:last-child > .button.flat, .inline-toolbar.location-bar toolbutton:last-child > .button.flat, .inline-toolbar .header-bar toolbutton:last-child > .button.titlebutton, .header-bar .inline-toolbar toolbutton:last-child > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton:last-child > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton:last-child > .button.titlebutton,
+.inline-toolbar.toolbar toolbutton:backdrop:last-child > .button.flat,
+.inline-toolbar toolbutton:backdrop:last-child > .button.flat,
+.inline-toolbar.search-bar toolbutton:backdrop:last-child > .button.flat,
+.inline-toolbar.location-bar toolbutton:backdrop:last-child > .button.flat,
+.inline-toolbar .header-bar toolbutton:backdrop:last-child > .button.titlebutton,
+.header-bar .inline-toolbar toolbutton:backdrop:last-child > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton:backdrop:last-child > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton:backdrop:last-child > .button.titlebutton, combobox.combobox-entry .entry:last-child, combobox.combobox-entry .button:last-child, .linked > combobox:last-child > .button {
   border-radius: 3px 3px 3px 3px; }
-  .osd .button:last-child:dir(rtl):hover, .osd .button:last-child:dir(rtl):active, .osd .button:last-child:dir(rtl):checked, .osd .button:last-child:dir(rtl):disabled, .osd .button:last-child:dir(rtl):backdrop, .osd .button.suggested-action:last-child:dir(rtl), .osd .button.destructive-action:last-child:dir(rtl), .inline-toolbar .button:last-child:dir(rtl), .linked > .button:last-child:dir(rtl), .inline-toolbar GtkToolButton:last-child > .button.flat:dir(rtl), .inline-toolbar .header-bar GtkToolButton:last-child > .button.titlebutton:dir(rtl), .header-bar .inline-toolbar GtkToolButton:last-child > .button.titlebutton:dir(rtl),
-  .inline-toolbar .titlebar GtkToolButton:last-child > .button.titlebutton:dir(rtl),
-  .titlebar .inline-toolbar GtkToolButton:last-child > .button.titlebutton:dir(rtl),
-  .inline-toolbar GtkToolButton:backdrop:last-child > .button.flat:dir(rtl), .inline-toolbar.toolbar GtkToolButton:last-child:dir(rtl) > .button.flat, .inline-toolbar GtkToolButton:last-child:dir(rtl) > .button.flat, .inline-toolbar.search-bar GtkToolButton:last-child:dir(rtl) > .button.flat, .inline-toolbar.location-bar GtkToolButton:last-child:dir(rtl) > .button.flat, .inline-toolbar .header-bar GtkToolButton:last-child:dir(rtl) > .button.titlebutton, .header-bar .inline-toolbar GtkToolButton:last-child:dir(rtl) > .button.titlebutton,
-  .inline-toolbar .titlebar GtkToolButton:last-child:dir(rtl) > .button.titlebutton,
-  .titlebar .inline-toolbar GtkToolButton:last-child:dir(rtl) > .button.titlebutton,
-  .inline-toolbar.toolbar GtkToolButton:backdrop:last-child:dir(rtl) > .button.flat,
-  .inline-toolbar GtkToolButton:backdrop:last-child:dir(rtl) > .button.flat,
-  .inline-toolbar.search-bar GtkToolButton:backdrop:last-child:dir(rtl) > .button.flat,
-  .inline-toolbar.location-bar GtkToolButton:backdrop:last-child:dir(rtl) > .button.flat,
-  .inline-toolbar .header-bar GtkToolButton:backdrop:last-child:dir(rtl) > .button.titlebutton,
-  .header-bar .inline-toolbar GtkToolButton:backdrop:last-child:dir(rtl) > .button.titlebutton,
-  .inline-toolbar .titlebar GtkToolButton:backdrop:last-child:dir(rtl) > .button.titlebutton,
-  .titlebar .inline-toolbar GtkToolButton:backdrop:last-child:dir(rtl) > .button.titlebutton, GtkComboBox.combobox-entry .entry:last-child:dir(rtl), GtkComboBox.combobox-entry .button:last-child:dir(rtl), .linked > GtkComboBox:last-child > .button:dir(rtl) {
+  .osd .button:last-child:dir(rtl):hover, .osd .button:last-child:dir(rtl):active, .osd .button:last-child:dir(rtl):checked, .osd .button:last-child:dir(rtl):disabled, .osd .button:last-child:dir(rtl):backdrop, .osd .button.suggested-action:last-child:dir(rtl), .osd .button.destructive-action:last-child:dir(rtl), .inline-toolbar .button:last-child:dir(rtl), .linked > .button:last-child:dir(rtl), .inline-toolbar toolbutton:last-child > .button.flat:dir(rtl), .inline-toolbar .header-bar toolbutton:last-child > .button.titlebutton:dir(rtl), .header-bar .inline-toolbar toolbutton:last-child > .button.titlebutton:dir(rtl),
+  .inline-toolbar .titlebar toolbutton:last-child > .button.titlebutton:dir(rtl),
+  .titlebar .inline-toolbar toolbutton:last-child > .button.titlebutton:dir(rtl),
+  .inline-toolbar toolbutton:backdrop:last-child > .button.flat:dir(rtl), .inline-toolbar.toolbar toolbutton:last-child:dir(rtl) > .button.flat, .inline-toolbar toolbutton:last-child:dir(rtl) > .button.flat, .inline-toolbar.search-bar toolbutton:last-child:dir(rtl) > .button.flat, .inline-toolbar.location-bar toolbutton:last-child:dir(rtl) > .button.flat, .inline-toolbar .header-bar toolbutton:last-child:dir(rtl) > .button.titlebutton, .header-bar .inline-toolbar toolbutton:last-child:dir(rtl) > .button.titlebutton,
+  .inline-toolbar .titlebar toolbutton:last-child:dir(rtl) > .button.titlebutton,
+  .titlebar .inline-toolbar toolbutton:last-child:dir(rtl) > .button.titlebutton,
+  .inline-toolbar.toolbar toolbutton:backdrop:last-child:dir(rtl) > .button.flat,
+  .inline-toolbar toolbutton:backdrop:last-child:dir(rtl) > .button.flat,
+  .inline-toolbar.search-bar toolbutton:backdrop:last-child:dir(rtl) > .button.flat,
+  .inline-toolbar.location-bar toolbutton:backdrop:last-child:dir(rtl) > .button.flat,
+  .inline-toolbar .header-bar toolbutton:backdrop:last-child:dir(rtl) > .button.titlebutton,
+  .header-bar .inline-toolbar toolbutton:backdrop:last-child:dir(rtl) > .button.titlebutton,
+  .inline-toolbar .titlebar toolbutton:backdrop:last-child:dir(rtl) > .button.titlebutton,
+  .titlebar .inline-toolbar toolbutton:backdrop:last-child:dir(rtl) > .button.titlebutton, combobox.combobox-entry .entry:last-child:dir(rtl), combobox.combobox-entry .button:last-child:dir(rtl), .linked > combobox:last-child > .button:dir(rtl) {
     border-right-style: solid; }
-.osd .button:only-child:hover, .osd .button:only-child:active, .osd .button:only-child:checked, .osd .button:only-child:disabled, .osd .button:only-child:backdrop, .osd .button.suggested-action:only-child, .osd .button.destructive-action:only-child, .inline-toolbar .button:only-child, .linked > .button:only-child, .inline-toolbar.toolbar GtkToolButton:only-child > .button.flat, .inline-toolbar GtkToolButton:only-child > .button.flat, .inline-toolbar.search-bar GtkToolButton:only-child > .button.flat, .inline-toolbar.location-bar GtkToolButton:only-child > .button.flat, .inline-toolbar .header-bar GtkToolButton:only-child > .button.titlebutton, .header-bar .inline-toolbar GtkToolButton:only-child > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton:only-child > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton:only-child > .button.titlebutton,
-.inline-toolbar.toolbar GtkToolButton:backdrop:only-child > .button.flat,
-.inline-toolbar GtkToolButton:backdrop:only-child > .button.flat,
-.inline-toolbar.search-bar GtkToolButton:backdrop:only-child > .button.flat,
-.inline-toolbar.location-bar GtkToolButton:backdrop:only-child > .button.flat,
-.inline-toolbar .header-bar GtkToolButton:backdrop:only-child > .button.titlebutton,
-.header-bar .inline-toolbar GtkToolButton:backdrop:only-child > .button.titlebutton,
-.inline-toolbar .titlebar GtkToolButton:backdrop:only-child > .button.titlebutton,
-.titlebar .inline-toolbar GtkToolButton:backdrop:only-child > .button.titlebutton, GtkComboBox.combobox-entry .entry:only-child, GtkComboBox.combobox-entry .button:only-child, .linked > GtkComboBox:only-child > .button {
+.osd .button:only-child:hover, .osd .button:only-child:active, .osd .button:only-child:checked, .osd .button:only-child:disabled, .osd .button:only-child:backdrop, .osd .button.suggested-action:only-child, .osd .button.destructive-action:only-child, .inline-toolbar .button:only-child, .linked > .button:only-child, .inline-toolbar.toolbar toolbutton:only-child > .button.flat, .inline-toolbar toolbutton:only-child > .button.flat, .inline-toolbar.search-bar toolbutton:only-child > .button.flat, .inline-toolbar.location-bar toolbutton:only-child > .button.flat, .inline-toolbar .header-bar toolbutton:only-child > .button.titlebutton, .header-bar .inline-toolbar toolbutton:only-child > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton:only-child > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton:only-child > .button.titlebutton,
+.inline-toolbar.toolbar toolbutton:backdrop:only-child > .button.flat,
+.inline-toolbar toolbutton:backdrop:only-child > .button.flat,
+.inline-toolbar.search-bar toolbutton:backdrop:only-child > .button.flat,
+.inline-toolbar.location-bar toolbutton:backdrop:only-child > .button.flat,
+.inline-toolbar .header-bar toolbutton:backdrop:only-child > .button.titlebutton,
+.header-bar .inline-toolbar toolbutton:backdrop:only-child > .button.titlebutton,
+.inline-toolbar .titlebar toolbutton:backdrop:only-child > .button.titlebutton,
+.titlebar .inline-toolbar toolbutton:backdrop:only-child > .button.titlebutton, combobox.combobox-entry .entry:only-child, combobox.combobox-entry .button:only-child, .linked > combobox:only-child > .button {
   border-radius: 3px;
   border-style: solid; }
 
-.linked.vertical > .entry, .linked.vertical > .button, .linked.vertical > .button:hover, .linked.vertical > .button:active, .linked.vertical > .button:checked, .linked.vertical > .button:backdrop, .linked.vertical > GtkComboBoxText > .button,
-.linked.vertical > GtkComboBox > .button {
+.linked.vertical > .entry, .linked.vertical > .button, .linked.vertical > .button:hover, .linked.vertical > .button:active, .linked.vertical > .button:checked, .linked.vertical > .button:backdrop, .linked.vertical > combobox > .button,
+.linked.vertical > combobox> .button {
   border-left-style: solid;
   border-bottom-style: none;
   border-radius: 3px; }
 
-.linked.vertical > .entry:first-child, .linked.vertical > .button:first-child, .linked.vertical > GtkComboBoxText:first-child > .button,
-.linked.vertical > GtkComboBox:first-child > .button {
+.linked.vertical > .entry:first-child, .linked.vertical > .button:first-child, .linked.vertical > combobox:first-child > .button,
+.linked.vertical > combobox:first-child > .button {
   border-radius: 3px 3px 3px 3px; }
-.linked.vertical > .entry:last-child, .linked.vertical > .button:last-child, .linked.vertical > GtkComboBoxText:last-child > .button,
-.linked.vertical > GtkComboBox:last-child > .button {
+.linked.vertical > .entry:last-child, .linked.vertical > .button:last-child, .linked.vertical > combobox:last-child > .button,
+.linked.vertical > combobox:last-child > .button {
   border-radius: 3px 3px 3px 3px;
   border-style: solid; }
-.linked.vertical > .entry:only-child, .linked.vertical > .button:only-child, .linked.vertical > GtkComboBoxText:only-child > .button,
-.linked.vertical > GtkComboBox:only-child > .button {
+.linked.vertical > .entry:only-child, .linked.vertical > .button:only-child, .linked.vertical > combobox:only-child > .button,
+.linked.vertical > combobox:only-child > .button {
   border-radius: 3px;
   border-style: solid; }
 
@@ -1015,13 +1014,13 @@ GtkTextView {
   .titlebar .menuitem.titlebutton.button:hover {
     background-color: #dcddde; }
 
-GtkColorButton.button, .header-bar GtkColorButton.button.titlebutton,
-.titlebar GtkColorButton.button.titlebutton {
+button.color.button, .header-bar button.color.button.titlebutton,
+.titlebar button.color.button.titlebutton {
   padding: 5px; }
-  GtkColorButton.button GtkColorSwatch:first-child:last-child {
+  button.color.button GtkColorSwatch:first-child:last-child {
     border-radius: 0;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px white; }
-    GtkColorButton.button GtkColorSwatch:first-child:last-child:disabled, GtkColorButton.button GtkColorSwatch:first-child:last-child:backdrop {
+    button.color.button GtkColorSwatch:first-child:last-child:disabled, button.color.button GtkColorSwatch:first-child:last-child:backdrop {
       box-shadow: none; }
 
 /*********
@@ -1233,25 +1232,25 @@ GtkTreeView .spinbutton.entry, GtkTreeView .spinbutton.entry:focus {
 /**************
  * ComboBoxes *
  **************/
-GtkComboBox {
+combobox{
   -GtkComboBox-arrow-scaling: 0.5;
   -GtkComboBox-shadow-type: none;
   box-shadow: 0 1px white; }
-  GtkComboBox > .button, .header-bar GtkComboBox > .button.titlebutton,
-  .titlebar GtkComboBox > .button.titlebutton {
+  combobox> .button, .header-bar combobox> .button.titlebutton,
+  .titlebar combobox> .button.titlebutton {
     padding-top: 3px;
     padding-bottom: 4px; }
-  GtkComboBox:disabled {
+  combobox:disabled {
     color: #909396;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  GtkComboBox:backdrop {
+  combobox:backdrop {
     color: #bfc1c3;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  GtkComboBox:backdrop:disabled {
+  combobox:backdrop:disabled {
     color: #c6cacd; }
-  GtkComboBox .menuitem {
+  combobox.menuitem {
     text-shadow: none; }
 
 /************
@@ -1415,17 +1414,16 @@ GtkComboBox {
   .header-bar .subtitle {
     font-size: smaller;
     padding: 0 12px; }
-  .titlebar .header-bar-separator, .titlebar > GtkBox > .separator.vertical,
-  GtkPlacesSidebar.sidebar .view .titlebar > GtkBox > .vertical.separator:backdrop,
+  .titlebar .header-bar-separator, .titlebar > box > .separator.vertical,
+  placesidebar.sidebar .view .titlebar > box > .vertical.separator:backdrop,
   .header-bar .header-bar-separator,
-  .header-bar > GtkBox > .separator.vertical,
-  GtkPlacesSidebar.sidebar .view .header-bar > GtkBox > .vertical.separator:backdrop {
-    -GtkWidget-separator-width: 1px;
+  .header-bar > box > .separator.vertical,
+  placesidebar.sidebar .view .header-bar > box > .vertical.separator:backdrop {
     border-width: 0 1px;
     border-image: linear-gradient(to bottom, rgba(189, 195, 199, 0), #bdc3c7 30%, #bdc3c7 70%, rgba(189, 195, 199, 0) 100%) 0 1/0 1px stretch; }
-    .titlebar .header-bar-separator:backdrop, .titlebar > GtkBox > .separator.vertical:backdrop,
+    .titlebar .header-bar-separator:backdrop, .titlebar > box > .separator.vertical:backdrop,
     .header-bar .header-bar-separator:backdrop,
-    .header-bar > GtkBox > .separator.vertical:backdrop {
+    .header-bar > box > .separator.vertical:backdrop {
       border-image: linear-gradient(to bottom, rgba(194, 199, 203, 0.5)) 0 1/1px 1px; }
   .titlebar.selection-mode,
   .header-bar.selection-mode {
@@ -1632,10 +1630,10 @@ GtkComboBox {
       box-shadow: none;
       padding-left: 10px;
       padding-right: 10px; }
-      .titlebar.selection-mode .selection-menu GtkArrow, .titlebar.selection-mode .selection-menu:backdrop GtkArrow,
-      .header-bar.selection-mode .selection-menu GtkArrow,
-      .header-bar.selection-mode .selection-menu:backdrop GtkArrow {
-        -GtkArrow-arrow-scaling: 1; }
+      .titlebar.selection-mode .selection-menu arrow, .titlebar.selection-mode .selection-menu:backdrop arrow,
+      .header-bar.selection-mode .selection-menu arrow,
+      .header-bar.selection-mode .selection-menu:backdrop arrow {
+        -arrow-arrow-scaling: 1; }
       .titlebar.selection-mode .selection-menu .arrow,
       .header-bar.selection-mode .selection-menu .arrow {
         -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
@@ -1684,15 +1682,15 @@ GtkComboBox {
   .path-bar .button .label:only-child {
     padding-right: 0;
     padding-left: 0; }
-  .path-bar .button GtkImage, .path-bar .header-bar .button.titlebutton GtkImage, .header-bar .path-bar .button.titlebutton GtkImage,
-  .path-bar .titlebar .button.titlebutton GtkImage,
-  .titlebar .path-bar .button.titlebutton GtkImage {
+  .path-bar .button image, .path-bar .header-bar .button.titlebutton image, .header-bar .path-bar .button.titlebutton image,
+  .path-bar .titlebar .button.titlebutton image,
+  .titlebar .path-bar .button.titlebutton image {
     padding-top: 1px; }
 
 /**************
  * Tree Views *
  **************/
-GtkTreeView.view {
+treeview.view {
   -GtkTreeView-grid-line-width: 1;
   -GtkTreeView-grid-line-pattern: '';
   -GtkTreeView-tree-line-width: 1;
@@ -1700,67 +1698,67 @@ GtkTreeView.view {
   -GtkTreeView-expander-size: 16;
   border-left-color: #96999b;
   border-top-color: #eff0f1; }
-  GtkTreeView.view:selected {
+  treeview.view:selected {
     border-radius: 0; }
-  GtkTreeView.view:selected, GtkTreeView.view:backdrop:selected {
+  treeview.view:selected, treeview.view:backdrop:selected {
     border-left-color: #9cd5f2;
     border-top-color: rgba(49, 54, 59, 0.1); }
-  GtkTreeView.view:disabled {
+  treeview.view:disabled {
     color: #909396; }
-    GtkTreeView.view:disabled:selected {
+    treeview.view:disabled:selected {
       color: #89cdf0; }
-      GtkTreeView.view:disabled:selected:backdrop {
+      treeview.view:disabled:selected:backdrop {
         color: #76c5ee; }
-    GtkTreeView.view:disabled:backdrop {
+    treeview.view:disabled:backdrop {
       color: #c6cacd; }
-  GtkTreeView.view.separator:backdrop {
+  treeview.view.separator:backdrop {
     color: rgba(0, 0, 0, 0.1); }
-  GtkTreeView.view:backdrop {
+  treeview.view:backdrop {
     border-left-color: #d7d8da;
     border-top: #eff0f1; }
-  GtkTreeView.view.dnd {
+  treeview.view.dnd {
     border-style: solid none;
     border-width: 1px;
     border-color: #377292; }
-  GtkTreeView.view.expander {
+  treeview.view.expander {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
     color: #6d7174; }
-    GtkTreeView.view.expander:dir(rtl) {
+    treeview.view.expander:dir(rtl) {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
-    GtkTreeView.view.expander:hover {
+    treeview.view.expander:hover {
       color: #31363b; }
-    GtkTreeView.view.expander:selected {
+    treeview.view.expander:selected {
       color: #c2e4f6; }
-      GtkTreeView.view.expander:selected:hover {
+      treeview.view.expander:selected:hover {
         color: #fcfcfc; }
-      GtkTreeView.view.expander:selected:backdrop {
+      treeview.view.expander:selected:backdrop {
         color: #c2e4f6; }
-    GtkTreeView.view.expander:checked {
+    treeview.view.expander:checked {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-    GtkTreeView.view.expander:backdrop {
+    treeview.view.expander:backdrop {
       color: #d2d3d5; }
-  GtkTreeView.view.progressbar {
+  treeview.view.progressbar {
     color: #fcfcfc;
     border: 1px solid #3daee9;
     border-radius: 4px;
     background-image: linear-gradient(to bottom, #3daee9, #1998da);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px rgba(0, 0, 0, 0.2); }
-    GtkTreeView.view.progressbar:selected {
+    treeview.view.progressbar:selected {
       color: #3daee9;
       box-shadow: none;
       background-image: linear-gradient(to bottom, #fcfcfc, #e3e3e3); }
-      GtkTreeView.view.progressbar:selected:backdrop {
+      treeview.view.progressbar:selected:backdrop {
         color: #3daee9;
         border-color: #3daee9;
         background-color: white; }
-    GtkTreeView.view.progressbar:backdrop {
+    treeview.view.progressbar:backdrop {
       color: white;
       background-image: none;
       box-shadow: none; }
-  GtkTreeView.view.trough {
+  treeview.view.trough {
     background-color: rgba(49, 54, 59, 0.1);
     border-radius: 4px; }
-    GtkTreeView.view.trough:selected {
+    treeview.view.trough:selected {
       background-color: rgba(252, 252, 252, 0.3);
       border-width: 1px 0;
       border-style: solid;
@@ -2191,9 +2189,9 @@ column-header .titlebar .button.titlebutton,
       .notebook tab .button:backdrop {
         color: #eff0f1;
         border-color: transparent; }
-      .notebook tab .button > GtkImage, .notebook tab .header-bar .button.titlebutton > GtkImage, .header-bar .notebook tab .button.titlebutton > GtkImage,
-      .notebook tab .titlebar .button.titlebutton > GtkImage,
-      .titlebar .notebook tab .button.titlebutton > GtkImage {
+      .notebook tab .button > image, .notebook tab .header-bar .button.titlebutton > image, .header-bar .notebook tab .button.titlebutton > image,
+      .notebook tab .titlebar .button.titlebutton > image,
+      .titlebar .notebook tab .button.titlebutton > image {
         padding: 0px; }
     .notebook tab .button .active-page, .notebook tab .button.active-page {
       background-color: #da4453; }
@@ -2346,60 +2344,60 @@ column-header .titlebar .button.titlebutton,
 /**********
  * Switch *
  **********/
-GtkSwitch {
+switch{
   -GtkSwitch-slider-width: 30px;
   font-weight: bold;
   font-size: smaller;
   outline-offset: 0px;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
-  GtkSwitch.trough {
+  switch.trough {
     border: 1px solid #bdc3c7;
     border-radius: 3px;
     color: #31363b;
     background-image: none;
     background-color: #eff0f1;
     text-shadow: none; }
-    GtkSwitch.trough:active {
+    switch.trough:active {
       color: #3daee9;
       border-color: #3daee9;
       box-shadow: none;
       text-shadow: none; }
-      GtkSwitch.trough:active:hover {
+      switch.trough:active:hover {
         border-color: #93cee9; }
-    GtkSwitch.trough:hover {
+    switch.trough:hover {
       border-color: #3daee9; }
-    GtkSwitch.trough:disabled {
+    switch.trough:disabled {
       color: #909396;
       border-color: #bdc3c7;
       background-image: none;
       background-color: #e5e6e7;
       box-shadow: none;
       text-shadow: none; }
-  GtkSwitch.slider {
+  switch.slider {
     padding: 3px;
     border: 3px solid;
     border-radius: 3px;
     border-color: rgba(255, 255, 255, 0);
     box-shadow: none;
     background-color: #bdc3c7; }
-    GtkSwitch.slider:hover {
+    switch.slider:hover {
       box-shadow: none; }
-    GtkSwitch.slider:active {
+    switch.slider:active {
       background-color: #3daee9; }
-      GtkSwitch.slider:active:hover {
+      switch.slider:active:hover {
         background-color: #93cee9; }
-    GtkSwitch.slider:disabled {
+    switch.slider:disabled {
       background-color: #e5e6e7; }
-  .list-row:selected GtkSwitch {
+  .list-row:selected switch{
     box-shadow: none;
     border-color: #3daee9; }
-    .list-row:selected GtkSwitch:backdrop {
+    .list-row:selected switch:backdrop {
       border-color: #3daee9; }
-    .list-row:selected GtkSwitch.slider:dir(rtl) {
+    .list-row:selected switch.slider:dir(rtl) {
       border-left-color: #bdc3c7; }
-    .list-row:selected GtkSwitch.slider:dir(ltr) {
+    .list-row:selected switch.slider:dir(ltr) {
       border-right-color: #bdc3c7; }
-    .list-row:selected GtkSwitch.slider, .list-row:selected GtkSwitch.slider:active {
+    .list-row:selected switch.slider, .list-row:selected switch.slider:active {
       border-color: #3daee9; }
 
 /*************************
@@ -3377,8 +3375,8 @@ GtkProgressBar {
 GtkScrolledWindow GtkViewport.frame {
   border-style: none; }
 
-.separator, GtkPlacesSidebar.sidebar .view .separator,
-GtkPlacesSidebar.sidebar .view .separator:backdrop {
+.separator, placesidebar.sidebar .view .separator,
+placesidebar.sidebar .view .separator:backdrop {
   color: rgba(0, 0, 0, 0.1); }
 
 /*********
@@ -3780,26 +3778,26 @@ GtkFileChooserDialog .dialog-action-box {
   border: none;
   background-color: #eff0f1; }
 
-GtkPlacesSidebar.sidebar .view {
+placesidebar.sidebar .view {
   color: #31363b;
   background-color: transparent; }
-  GtkPlacesSidebar.sidebar .view .image {
+  placesidebar.sidebar .view .image {
     color: #6a6d71; }
-    GtkPlacesSidebar.sidebar .view .image:selected {
+    placesidebar.sidebar .view .image:selected {
       color: #e8f4fa; }
-      GtkPlacesSidebar.sidebar .view .image:selected:backdrop {
+      placesidebar.sidebar .view .image:selected:backdrop {
         color: #e8f4fa; }
-    GtkPlacesSidebar.sidebar .view .image:disabled {
+    placesidebar.sidebar .view .image:disabled {
       color: #acaeb1; }
-    GtkPlacesSidebar.sidebar .view .image:backdrop {
+    placesidebar.sidebar .view .image:backdrop {
       color: #cdcfd0; }
-      GtkPlacesSidebar.sidebar .view .image:backdrop:disabled {
+      placesidebar.sidebar .view .image:backdrop:disabled {
         color: #d2d5d7; }
-  GtkPlacesSidebar.sidebar .view:disabled {
+  placesidebar.sidebar .view:disabled {
     color: #909396; }
-  GtkPlacesSidebar.sidebar .view:backdrop {
+  placesidebar.sidebar .view:backdrop {
     color: #bfc1c3; }
-    GtkPlacesSidebar.sidebar .view:backdrop:disabled {
+    placesidebar.sidebar .view:backdrop:disabled {
       color: #c6cacd; }
 
 .sidebar-item {
@@ -4192,7 +4190,7 @@ GtkVolumeButton.button, .header-bar GtkVolumeButton.button.titlebutton,
     -gtk-icon-shadow: none; }
 
 .view:selected, GtkCalendar:selected, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .entry:selected, .entry:selected:focus, .menuitem.button.flat:selected, .header-bar .menuitem.titlebutton.button:selected,
-.titlebar .menuitem.titlebutton.button:selected, .list-row:selected, .sidebar:selected, GtkPlacesSidebar.sidebar .view:selected, GtkPlacesSidebar.sidebar GtkCalendar:selected {
+.titlebar .menuitem.titlebutton.button:selected, .list-row:selected, .sidebar:selected, placesidebar.sidebar .view:selected, placesidebar.sidebar GtkCalendar:selected {
   background-color: #3daee9;
   color: #fcfcfc;
   outline-color: rgba(252, 252, 252, 0.3); }
