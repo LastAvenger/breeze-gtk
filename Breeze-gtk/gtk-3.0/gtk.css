@@ -967,12 +967,12 @@ textview.view {
   border-radius: 3px;
   border-style: solid; }
 
-.menuitem.button.flat, .header-bar .menuitem.titlebutton.button,
-.titlebar .menuitem.titlebutton.button, .menuitem.button.flat:backdrop, .menuitem.button.flat:backdrop:hover, .header-bar .menuitem.titlebutton.button:backdrop:hover,
-.titlebar .menuitem.titlebutton.button:backdrop:hover, .button:link, .header-bar .button.titlebutton:link,
+menuitem.button.flat, .header-bar menuitem.titlebutton.button,
+.titlebar menuitem.titlebutton.button, menuitem.button.flat:backdrop, menuitem.button.flat:backdrop:hover, .header-bar menuitem.titlebutton.button:backdrop:hover,
+.titlebar menuitem.titlebutton.button:backdrop:hover, .button:link, .header-bar .button.titlebutton:link,
 .titlebar .button.titlebutton:link, .button:visited, .header-bar .button.titlebutton:visited,
-.titlebar .button.titlebutton:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .button:link:backdrop, .button:visited:backdrop, .menu.button, .header-bar .menu.button.titlebutton,
-.titlebar .menu.button.titlebutton, .list-row.button, .header-bar .list-row.button.titlebutton,
+.titlebar .button.titlebutton:visited, .button:link:hover, .button:link:active, .button:link:checked, .button:visited:hover, .button:visited:active, .button:visited:checked, .button:link:backdrop, .button:visited:backdrop, menu.button, .header-bar menu.button.titlebutton,
+.titlebar menu.button.titlebutton, .list-row.button, .header-bar .list-row.button.titlebutton,
 .titlebar .list-row.button.titlebutton,
 .list-row.button:backdrop,
 .list-row.button:backdrop:active,
@@ -1007,11 +1007,11 @@ textview.view {
   -gtk-icon-shadow: none; }
 
 /* menu buttons */
-.menuitem.button.flat, .header-bar .menuitem.titlebutton.button,
-.titlebar .menuitem.titlebutton.button {
+menuitem.button.flat, .header-bar menuitem.titlebutton.button,
+.titlebar menuitem.titlebutton.button {
   outline-offset: -1px; }
-  .menuitem.button.flat:hover, .header-bar .menuitem.titlebutton.button:hover,
-  .titlebar .menuitem.titlebutton.button:hover {
+  menuitem.button.flat:hover, .header-bar menuitem.titlebutton.button:hover,
+  .titlebar menuitem.titlebutton.button:hover {
     background-color: #dcddde; }
 
 button.color.button, .header-bar button.color.button.titlebutton,
@@ -1250,7 +1250,7 @@ combobox{
     -gtk-icon-shadow: none; }
   combobox:backdrop:disabled {
     color: #c6cacd; }
-  combobox.menuitem {
+  comboboxmenuitem {
     text-shadow: none; }
 
 /************
@@ -1826,65 +1826,65 @@ column-header .titlebar .button.titlebutton,
 /*********
  * Menus *
  *********/
-.menubar {
+menubar {
   -GtkWidget-window-dragging: true;
   padding: 2px;
   box-shadow: none; }
-  .menubar:backdrop {
+  menubar:backdrop {
     background-color: #eff0f1; }
-  .menubar > .menuitem {
+  menubar > menuitem {
     padding: 4px 8px; }
-    .menubar > .menuitem:hover {
+    menubar > menuitem:hover {
       background-color: #3daee9;
       color: #fcfcfc; }
-    .menubar > .menuitem:disabled {
+    menubar > menuitem:disabled {
       color: #909396;
       box-shadow: none; }
 
-.menu {
+menu {
   padding: 0px;
   background-color: #eff0f1;
   border: 1px solid #bdc3c7;
   border-radius: 3px; }
-  .csd .menu {
+  .csd menu {
     border: 1px solid #bdc3c7; }
-  .menu .menuitem {
+  menu menuitem {
     text-shadow: none;
     padding: 6px 6px; }
-    .menu .menuitem:hover {
+    menu menuitem:hover {
       color: #fcfcfc;
       background-color: #3daee9;
       background-clip: padding-box;
       border-style: solid;
       border-width: 2px;
       border-color: transparent; }
-    .menu .menuitem:disabled {
+    menu menuitem:disabled {
       color: #909396; }
-      .menu .menuitem:disabled:backdrop {
+      menu menuitem:disabled:backdrop {
         color: #c6cacd; }
-    .menu .menuitem:backdrop, .menu .menuitem:backdrop:hover {
+    menu menuitem:backdrop, menu menuitem:backdrop:hover {
       color: #31363b;
       background-color: #eff0f1; }
-    .menu .menuitem.arrow {
+    menu menuitem.arrow {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-    .menu .menuitem.arrow:dir(rtl) {
+    menu menuitem.arrow:dir(rtl) {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
-  .menu.button, .header-bar .menu.button.titlebutton,
-  .titlebar .menu.button.titlebutton {
+  menu.button, .header-bar menu.button.titlebutton,
+  .titlebar menu.button.titlebutton {
     border-style: none;
     border-radius: 0; }
-    .menu.button.top {
+    menu.button.top {
       border-bottom: 1px solid #e7e8e8; }
-    .menu.button.bottom {
+    menu.button.bottom {
       border-top: 1px solid #e7e8e8; }
-    .menu.button:hover {
+    menu.button:hover {
       background-color: #e7e8e8; }
-    .menu.button:disabled {
+    menu.button:disabled {
       color: transparent;
       background-color: transparent;
       border-color: transparent; }
 
-.menuitem .accelerator {
+menuitem .accelerator {
   color: alpha(currentColor,0.55); }
 
 /***************
@@ -2601,18 +2601,18 @@ switch{
 .list-row:selected .check:backdrop:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/selected-checkbox-checked-backdrop-insensitive.png"), url("assets/selected-checkbox-checked-backdrop-insensitive@2.png")); }
 
-.menu .menuitem.check {
+menu menuitem.check {
   -gtk-icon-source: -gtk-icontheme("checkbox-symbolic");
   color: #7d8083;
   -gtk-icon-shadow: none; }
-  .menu .menuitem.check:active, .menu .menuitem.check:checked {
+  menu menuitem.check:active, menu menuitem.check:checked {
     -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic");
     color: #3daee9; }
-  .menu .menuitem.check:indeterminate {
+  menu menuitem.check:indeterminate {
     -gtk-icon-source: -gtk-icontheme("checkbox-mixed-symbolic"); }
-  .menu .menuitem.check:hover {
+  menu menuitem.check:hover {
     color: #fcfcfc; }
-  .menu .menuitem.check:disabled {
+  menu menuitem.check:disabled {
     color: #bfc1c3; }
 
 .radio {
@@ -2813,18 +2813,18 @@ switch{
 .list-row:selected .radio:backdrop:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("assets/selected-radio-checked-backdrop-insensitive.png"), url("assets/selected-radio-checked-backdrop-insensitive@2.png")); }
 
-.menu .menuitem.radio {
+menu menuitem.radio {
   -gtk-icon-source: -gtk-icontheme("radio-symbolic");
   color: #7d8083;
   -gtk-icon-shadow: none; }
-  .menu .menuitem.radio:active, .menu .menuitem.radio:checked {
+  menu menuitem.radio:active, menu menuitem.radio:checked {
     -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic");
     color: #3daee9; }
-  .menu .menuitem.radio:indeterminate {
+  menu menuitem.radio:indeterminate {
     -gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic"); }
-  .menu .menuitem.radio:hover {
+  menu menuitem.radio:hover {
     color: #fcfcfc; }
-  .menu .menuitem.radio:disabled {
+  menu menuitem.radio:disabled {
     color: #bfc1c3; }
 
 .view.check, .view.radio,
@@ -4189,8 +4189,8 @@ GtkVolumeButton.button, .header-bar GtkVolumeButton.button.titlebutton,
   .titlebar.selection-mode .titlebutton.button:backdrop {
     -gtk-icon-shadow: none; }
 
-.view:selected, GtkCalendar:selected, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .entry:selected, .entry:selected:focus, .menuitem.button.flat:selected, .header-bar .menuitem.titlebutton.button:selected,
-.titlebar .menuitem.titlebutton.button:selected, .list-row:selected, .sidebar:selected, placesidebar.sidebar .view:selected, placesidebar.sidebar GtkCalendar:selected {
+.view:selected, GtkCalendar:selected, .label:selected, .label:selected:focus, .label:selected:hover, .grid-child:selected, .entry:selected, .entry:selected:focus, menuitem.button.flat:selected, .header-bar menuitem.titlebutton.button:selected,
+.titlebar menuitem.titlebutton.button:selected, .list-row:selected, .sidebar:selected, placesidebar.sidebar .view:selected, placesidebar.sidebar GtkCalendar:selected {
   background-color: #3daee9;
   color: #fcfcfc;
   outline-color: rgba(252, 252, 252, 0.3); }
