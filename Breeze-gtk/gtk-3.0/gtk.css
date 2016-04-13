@@ -301,7 +301,7 @@ textview.view {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.01, to(#3daee9), to(transparent)); }
   to {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#3daee9), to(transparent)); } }
-.button, .header-bar button.titlebutton,
+button, .header-bar button.titlebutton,
 .titlebar button.titlebutton {
   border: 1px solid;
   border-radius: 3px;
@@ -392,7 +392,7 @@ textview.view {
       color: #31363b;
       border-color: #3daee9;
       background-image: none;
-      background-clip: padding-box;
+      background-clip: padding-ox;
       text-shadow: none;
       -gtk-icon-shadow: none;
       border: none;
