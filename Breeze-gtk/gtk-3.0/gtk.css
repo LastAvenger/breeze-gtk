@@ -4385,3 +4385,9 @@ read if you used those and something break with a version upgrade you're on your
 @define-color content_view_bg #fcfcfc;
 
 /*# sourceMappingURL=gtk.css.map */
+
+@define-color gray_color                #bdbdbd;
+separator { background-color: @gray_color; border: none; }
+entry selection, label selection { background-color: @selected_text_color; }
+
+@define-color selected_text_color       alpha(#b0c4de, 0.3);
